@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Iconic Sneakers</h1>
+<h4>...that every sneakerhead should know about...</h4>
+
+{% for icon in icons %}
+  <div class="card">
+      <!-- when sneaker card is clicked, it will take you to the sneaker's detail page -->
+      <a href="/icons/{{ icon.id }}">
+        <div class="card-content">
+            <span class="card-title">{{ icon.sneaker }}</span>
+            <p>Why: {{ icon.why }}</p>
+            <p>Debut Year: {{ icon.debut }}</p>
+        </div>
+      </a>
+  </div>
+{% endfor %}
+
+{% endblock %}
+
+<!-- to be included on sneaker detail page when clicked - 
+add to what is already on the card plus what is below:
+  <p>Sneaker Type: {{ icon.type }}</p>
+  <p>Description: {{ icon.description }}</p> -->
