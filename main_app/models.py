@@ -17,9 +17,10 @@ class User_Sneaker(models.Model):
     debut_year = models.IntegerField() 
     price = models.CharField(max_length=100)
 
+    # changes the instance method
+    def __str__(self):
+        return f'{self.sneaker} ({self.id})'
 
-def __str__(self):
-    return f'{self.name} ({self.id})'
-
-def get_absolute_url(self):
-    return reverse('detail', kwargs={'user_sneaker_id': self.id})
+    # changes the redirect after the add sneaker form is completed
+    def get_absolute_url(self):
+        return reverse('user_detail', kwargs={'user_sneaker_id': self.id})

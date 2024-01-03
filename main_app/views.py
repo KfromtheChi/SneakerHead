@@ -39,7 +39,7 @@ class UserCreate(CreateView):
   model = User_Sneaker
   fields = '__all__'
 # redirect after form is completed
-#   success_url = '/user_sneakers/{user_sneaker_id}'
+#success_url = '/user_sneakers/{user_sneaker_id}'
 
 class UserUpdate(UpdateView):
   model = User_Sneaker
