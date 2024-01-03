@@ -9,6 +9,6 @@ urlpatterns = [
     path('icons/<int:icon_id>/', views.icons_detail, name='detail'),
     path('user_sneakers/<int:user_sneaker_id>/', views.user_detail, name='user_detail'),
     path('user_sneakers/create/', views.UserCreate.as_view(), name='user_create'),
-    path('user_sneakers/<int:pk>/update/', views.UserUpdate.as_view(), name='user_update'),
-    path('user_sneakers/<int:pk>/delete/', views.UserDelete.as_view(), name='user_delete'),
+    path('user_sneakers/<int:pk>/update/', views.SneakerUpdate.as_view(), name='sneaker_update'),
+    path('user_sneakers/<int:pk>/delete/', views.SneakerDelete.as_view(), name='sneaker_delete'),
 ]

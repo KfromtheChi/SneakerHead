@@ -1,7 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <center> <h1>Add to your Collection</h1> </center>
+
+    <!-- Edit sneaker -->
+    {% if object %}
+        <h1>Edit <span class="cornflowerblue-text">{{object.sneaker}}</span></h1>
+    {% else %}
+        <center> <h1>Add to your Collection</h1> </center>
+    {% endif %}
+
   <!-- Leaving the action empty makes the form post to the same url used to display it -->
   <form action="" method="POST">
         <!-- Django requires the following for security purposes -->

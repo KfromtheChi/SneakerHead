@@ -38,13 +38,12 @@ def user_detail(request, user_sneaker_id):
 class UserCreate(CreateView):
   model = User_Sneaker
   fields = '__all__'
-# redirect after form is completed
-#success_url = '/user_sneakers/{user_sneaker_id}'
 
-class UserUpdate(UpdateView):
+
+class SneakerUpdate(UpdateView):
   model = User_Sneaker
   fields = '__all__'
 
-class UserDelete(DeleteView):
+class SneakerDelete(DeleteView):
   model = User_Sneaker
   success_url = '/user_sneakers'
