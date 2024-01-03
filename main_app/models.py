@@ -8,13 +8,13 @@ class Icon(models.Model):
     why = models.TextField()
     sneaker_type = models.TextField()
     description = models.TextField()
-    debut_year = models.DateField()
+    debut_year = models.IntegerField()
 
 class User_Sneaker(models.Model):
     sneaker = models.CharField(max_length=100)
     sneaker_type = models.CharField(max_length=100)
     description = models.TextField()
-    debut_year = models.DateField()
+    debut_year = models.IntegerField() 
     price = models.CharField(max_length=100)
 
 
