@@ -23,4 +23,4 @@ class User_Sneaker(models.Model):
 
     # changes the redirect after the add sneaker form is completed
     def get_absolute_url(self):
-        return reverse('user_detail', kwargs={'user_sneaker_id': self.id})
+        return reverse('sneaker_detail', kwargs={'user_sneaker_id': self.id})

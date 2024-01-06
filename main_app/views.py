@@ -17,9 +17,9 @@ def index(request):
         'icons': icons
     })
 
-def user_index(request):
+def sneaker_index(request):
     user_sneakers = User_Sneaker.objects.all() #get all icons from DB
-    return render(request, 'user_sneakers/user_index.html', {
+    return render(request, 'user_sneakers/sneaker_index.html', {
         'user_sneakers': user_sneakers
     })
 
@@ -29,9 +29,9 @@ def icons_detail(request, icon_id):
   icon = Icon.objects.get(id=icon_id)
   return render(request, 'icons/detail.html', { 'icon': icon })
 
-def user_detail(request, user_sneaker_id):
+def sneaker_detail(request, user_sneaker_id):
   user_sneaker = User_Sneaker.objects.get(id=user_sneaker_id)
-  return render(request, 'user_sneakers/user_detail.html', { 'user_sneaker': user_sneaker })
+  return render(request, 'user_sneakers/sneaker_detail.html', { 'user_sneaker': user_sneaker })
 
 #User CRUD for their sneaker collection
 
