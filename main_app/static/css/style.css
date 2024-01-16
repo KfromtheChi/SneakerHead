@@ -51,6 +51,10 @@ form {
     background-color: rgba(253, 253, 253, 0.807);
 }
 
+div.card-action {
+    color: black;
+}
+
 footer.page-footer {
     background-color: rgba(10, 9, 9, 0.459);
     padding-top: 5px;
@@ -69,9 +73,5 @@ footer.page-footer {
 
 .btn:hover {
     background-color: rgba(253, 253, 253, 0.61);
-    color: black;
-}
-
-div.card-action {
     color: black;
 }
