@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Sneaker Details</h1>
+<center> <h1>Sneaker Details</h1> </center>
 
 <div class="card">
   <div class="card-content">
-        <span class="card-title">{{ user_sneaker.sneaker }}</span>
-        <p>Sneaker Type: {{ user_sneaker.type }}</p>
+        <span class="card-title" "blue-text">{{ user_sneaker.sneaker }}</span>
+        <p>Sneaker Type: {{ user_sneaker.sneaker_type }}</p>
         <p>Description: {{ user_sneaker.description | linebreaks }}</p>
         <p>Debut Year: {{ user_sneaker.debut_year }}</p>
         <p>Price: {{ user_sneaker.price }}</p>

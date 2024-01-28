@@ -17,6 +17,11 @@ def index(request):
         'icons': icons
     })
 
+def feed(request):
+    return render(request, 'users/feed.html', {
+        'users': users
+    })
+
 def sneaker_index(request):
     user_sneakers = User_Sneaker.objects.all() #get all icons from DB
     return render(request, 'user_sneakers/sneaker_index.html', {
