@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import Icon, User_Sneaker
+from .models import Icon, User, User_Sneaker
 
-
+users = [
+   {'name': '', 'location': '', 'favorite': 'J1s'},
+]
 
 # Create your views here.
 def home(request):
@@ -18,6 +20,7 @@ def index(request):
     })
 
 def feed(request):
+    users = User.objects.all()
     return render(request, 'users/feed.html', {
         'users': users
     })
